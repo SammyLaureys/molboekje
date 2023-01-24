@@ -1,0 +1,52 @@
+
+<div class="container-fluid bg-standard pt-5 ps-5">
+    {{setKandidaat()}}
+    {{setNotes()}}
+    <h3 class="d-inline">{{kandidaat.name}}</h3> 
+    <button type="button" class="btn add-button btn-sm d-inline ms-4" data-bs-toggle="modal" data-bs-target="#addModal">+</button>
+    
+    <div class="modal fade bg-transparent" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered bg-transparent" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">New note:</h5>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" aria-label="Close">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-outline w-75 mb-4">
+                        <textarea [(ngModel)]="addedNote" [ngModelOptions]="{standalone: true}" class="form-control green-text bg-standard" id="textAreaExample6" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" (click)="addNote(addedNote)" data-bs-dismiss="modal">Add note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 mb-extra">
+        <ng-container *ngFor="let note of notes; let i = index">
+            <div *ngIf="note" class="col-sm-2 me-3 mt-2 notitie"> 
+                <h5>notitie:</h5>
+                <p *ngIf="!show[i]">{{note}}</p>
+                <div class="mb-1" *ngIf="show[i] && noteId === i">
+                    <textarea [(ngModel)]="editedNote" [ngModelOptions]="{standalone: true}"
+                        class="form-control green-text bg-standard" rows="3" placeholder="{{note}}"></textarea>
+                </div>
+                <div class="button-group float-end">
+                    <button *ngIf="show[i] && noteId === i" type="button" class="btn btn-outline-success btn-sm me-2"
+                        (click)="editNote(note, editedNote); toggle(i)">Ok</button>
+                    <button *ngIf="show[i] && noteId === i" type="button" class="btn btn-outline-secondary btn-sm me-2"
+                        (click)="toggle(i)">Cancel</button>
+                    <button *ngIf="!show[i]" type="button" class="btn btn-primary btn-sm me-2" (click)="toggle(i)">edit</button>
+                    <button *ngIf="!show[i]" type="button" class="btn btn-danger btn-sm"
+                        (click)="removeNote(note)">remove</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

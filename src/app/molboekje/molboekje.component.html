@@ -1,0 +1,22 @@
+<div class="container-fluid bg-standard pt-5 ps-5 border-fix">
+    <div class="row">
+        <div class="col-sm-3 pt-2" *ngFor="let kandidaat of kandidaten">
+            <div class="card" style="width: 391px;">
+                <div class="row cardHover" routerLinkActive="active-link2">
+                    <div class="col-sm-5">
+                        <img class="card-img" src="{{kandidaat.img}}" alt="foto van kandidaat">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="card-body">
+                            <h5 class="card-title">{{kandidaat.name}}</h5>
+                            <p class="card-text">{{kandidaat.description}}</p>
+                            <a [routerLink]="['notities', kandidaat.id]" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="green-text text-center mt-5">Notities: </h1>
+</div>
+<router-outlet></router-outlet>

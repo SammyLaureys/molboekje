@@ -1,0 +1,37 @@
+* {
+    background-color: #0b1822
+}
+
+p {
+    color: #04edc6
+}
+
+.bg-standard {
+    background-color: #0b1822;
+}
+
+.border-standard {
+    border: 2px solid #407270;
+}
+
+.border-fix{
+    border: 2px solid #0b1822;
+}
+
+.cardHover {
+    background-color: #0b1822;
+}
+
+.cardHover:hover {
+    outline: 2px solid #04edc6;
+    border-radius: 2%;
+}
+
+.green-text {
+    color: #04edc6;
+}
+
+.active-link2{
+    outline: 2px solid #04edc6;
+    border-radius: 2%;
+}

@@ -1,0 +1,16 @@
+{
+  "articles" : [
+    {
+      "title": "Locatie De Mol 2022",
+      "img": "../../assets/News-pics/Gilles.jpg",
+      "summary": "De Mol 2022 zal doorgaan op de Canarische Eilanden !!!",
+      "releaseDate": "2009-10-16"
+    },
+    {
+      "title": "Wie is dit mysterieuze figuur",
+      "img": "../../assets/News-pics/Mystery.jpg",
+      "summary": "De mol 2022 toonde een mysterieus figuur. Zou dit de mol kunnen zijn ? ",
+      "releaseDate": "2009-10-15"
+    }
+  ]
+}

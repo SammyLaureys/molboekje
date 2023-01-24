@@ -1,0 +1,27 @@
+* {
+    background-color: #0b1822
+}
+
+p {
+    color: #04edc6
+}
+
+.card-size{
+    max-width: 50%;
+}
+
+.bg-standard{
+    background-color: #0b1822;
+}
+
+.border-standard{
+    border: 2px solid #407270;
+}
+
+.green-color{
+     color: #04edc6;
+}
+
+.max-width{
+    max-width: 100%;
+}

@@ -1,0 +1,47 @@
+.green-text{
+    color: #04edc6;
+}
+
+* {
+    background-color: #0b1822
+}
+
+p {
+    color: #04edc6
+}
+
+.bg-standard {
+    background-color: #0b1822;
+}
+
+.border-standard {
+    border: 2px solid #407270;
+}
+
+.notitie{
+    border: 1px solid #04edc6;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.add-button{
+    outline: 1px solid #04edc6;
+    color: #04edc6;
+}
+
+.add-button:hover{
+    background-color: #407270;
+}
+
+.cancel-button{
+    outline: 1px solid red;
+    color: red;
+}
+
+.cancel-button:hover{
+    background-color: darkred;
+}
+
+.mb-extra{
+    margin-bottom: 15%;
+}
